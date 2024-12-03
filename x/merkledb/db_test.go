@@ -17,7 +17,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/MetalBlockchain/metalgo/database/dbtest"
+	"github.com/cryft-labs/cryftgo/database/dbtest"
 	"github.com/shubhamdubey02/cryftgo/database"
 	"github.com/shubhamdubey02/cryftgo/database/memdb"
 	"github.com/shubhamdubey02/cryftgo/ids"

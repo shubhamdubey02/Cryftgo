@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/MetalBlockchain/metalgo/database/dbtest"
+	"github.com/cryft-labs/cryftgo/database/dbtest"
 	"github.com/shubhamdubey02/cryftgo/database/memdb"
 )
 
