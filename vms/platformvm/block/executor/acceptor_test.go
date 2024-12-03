@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/MetalBlockchain/metalgo/database/databasemock"
 	"github.com/shubhamdubey02/cryftgo/chains/atomic"
 	"github.com/shubhamdubey02/cryftgo/chains/atomic/atomicmock"
+	"github.com/shubhamdubey02/cryftgo/database/databasemock"
 	"github.com/shubhamdubey02/cryftgo/ids"
 	"github.com/shubhamdubey02/cryftgo/snow"
 	"github.com/shubhamdubey02/cryftgo/utils"
