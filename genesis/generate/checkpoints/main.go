@@ -17,8 +17,8 @@ import (
 )
 
 const (
-	fujiURI    = "https://tahoe-index.metalblockchain.org"
-	mainnetURI = "https://api-index.metalblockchain.org"
+	fujiURI    = "https://tahoe-index.shubhamdubey02.org"
+	mainnetURI = "https://api-index.shubhamdubey02.org"
 
 	maxNumCheckpoints = 100
 )

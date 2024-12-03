@@ -47,7 +47,7 @@ RUN . ./build_env.sh && \
 
 # Create this directory in the builder to avoid requiring anything to be executed in the
 # potentially emulated execution container.
-RUN mkdir -p /metalgo/build
+RUN mkdir -p /cryftgo/build
 
 # ============= Cleanup Stage ================
 # Commands executed in this stage may be emulated (i.e. very slow) if TARGETPLATFORM and
@@ -55,10 +55,10 @@ RUN mkdir -p /metalgo/build
 FROM debian:11-slim AS execution
 
 # Maintain compatibility with previous images
-COPY --from=builder /metalgo/build /metalgo/build
-WORKDIR /metalgo/build
+COPY --from=builder /cryftgo/build /cryftgo/build
+WORKDIR /cryftgo/build
 
 # Copy the executables into the container
 COPY --from=builder /build/build/ .
 
-CMD [ "./metalgo" ]
+CMD [ "./cryftgo" ]

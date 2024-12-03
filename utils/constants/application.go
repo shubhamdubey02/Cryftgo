@@ -9,5 +9,5 @@ const (
 	PlatformName = "metal"
 
 	// AppName exports the name of the avalanche application
-	AppName = "metalgo"
+	AppName = "cryftgo"
 )

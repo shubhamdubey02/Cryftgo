@@ -5,13 +5,13 @@ set -euo pipefail
 # e.g.,
 # ./scripts/tests.upgrade.sh                                               # Use default version
 # ./scripts/tests.upgrade.sh 1.11.0                                        # Specify a version
-# METALGO_PATH=./path/to/metalgo ./scripts/tests.upgrade.sh 1.11.0 # Customization of metalgo path
+# cryftgo_PATH=./path/to/cryftgo ./scripts/tests.upgrade.sh 1.11.0 # Customization of cryftgo path
 if ! [[ "$0" =~ scripts/tests.upgrade.sh ]]; then
   echo "must be run from repository root"
   exit 255
 fi
 
-# The MetalGo local network does not support long-lived
+# The cryftgo local network does not support long-lived
 # backwards-compatible networks. When a breaking change is made to the
 # local network, this flag must be updated to the last compatible
 # version with the latest code.
@@ -26,35 +26,35 @@ if [[ -z "${VERSION}" ]]; then
   exit 255
 fi
 
-METALGO_PATH="$(realpath "${METALGO_PATH:-./build/metalgo}")"
+cryftgo_PATH="$(realpath "${cryftgo_PATH:-./build/cryftgo}")"
 
 #################################
-# download metalgo
+# download cryftgo
 # https://github.com/shubhamdubey02/cryftgo/releases
 GOARCH=$(go env GOARCH)
 GOOS=$(go env GOOS)
-DOWNLOAD_URL=https://github.com/shubhamdubey02/cryftgo/releases/download/v${VERSION}/metalgo-linux-${GOARCH}-v${VERSION}.tar.gz
-DOWNLOAD_PATH=/tmp/metalgo.tar.gz
+DOWNLOAD_URL=https://github.com/shubhamdubey02/cryftgo/releases/download/v${VERSION}/cryftgo-linux-${GOARCH}-v${VERSION}.tar.gz
+DOWNLOAD_PATH=/tmp/cryftgo.tar.gz
 if [[ ${GOOS} == "darwin" ]]; then
-  DOWNLOAD_URL=https://github.com/shubhamdubey02/cryftgo/releases/download/v${VERSION}/metalgo-macos-v${VERSION}.zip
-  DOWNLOAD_PATH=/tmp/metalgo.zip
+  DOWNLOAD_URL=https://github.com/shubhamdubey02/cryftgo/releases/download/v${VERSION}/cryftgo-macos-v${VERSION}.zip
+  DOWNLOAD_PATH=/tmp/cryftgo.zip
 fi
 
 rm -f ${DOWNLOAD_PATH}
-rm -rf "/tmp/metalgo-v${VERSION}"
-rm -rf /tmp/metalgo-build
+rm -rf "/tmp/cryftgo-v${VERSION}"
+rm -rf /tmp/cryftgo-build
 
-echo "downloading metalgo ${VERSION} at ${DOWNLOAD_URL}"
+echo "downloading cryftgo ${VERSION} at ${DOWNLOAD_URL}"
 curl -L "${DOWNLOAD_URL}" -o "${DOWNLOAD_PATH}"
 
-echo "extracting downloaded metalgo"
+echo "extracting downloaded cryftgo"
 if [[ ${GOOS} == "linux" ]]; then
   tar xzvf ${DOWNLOAD_PATH} -C /tmp
 elif [[ ${GOOS} == "darwin" ]]; then
-  unzip ${DOWNLOAD_PATH} -d /tmp/metalgo-build
-  mv /tmp/metalgo-build/build "/tmp/metalgo-v${VERSION}"
+  unzip ${DOWNLOAD_PATH} -d /tmp/cryftgo-build
+  mv /tmp/cryftgo-build/build "/tmp/cryftgo-v${VERSION}"
 fi
-find "/tmp/metalgo-v${VERSION}"
+find "/tmp/cryftgo-v${VERSION}"
 
 # Sourcing constants.sh ensures that the necessary CGO flags are set to
 # build the portable version of BLST. Without this, ginkgo may fail to
@@ -71,8 +71,8 @@ ACK_GINKGO_RC=true ginkgo build ./tests/upgrade
 
 #################################
 # By default, it runs all upgrade test cases!
-echo "running upgrade tests against the local cluster with ${METALGO_PATH}"
+echo "running upgrade tests against the local cluster with ${cryftgo_PATH}"
 ./tests/upgrade/upgrade.test \
   --ginkgo.v \
-  --metalgo-path="/tmp/metalgo-v${VERSION}/metalgo" \
-  --metalgo-path-to-upgrade-to="${METALGO_PATH}"
+  --cryftgo-path="/tmp/cryftgo-v${VERSION}/cryftgo" \
+  --cryftgo-path-to-upgrade-to="${cryftgo_PATH}"

@@ -31,7 +31,7 @@ const (
 	DefaultHTTPPort    = 9650
 	DefaultStakingPort = 9651
 
-	AvalancheGoDataDirVar    = "METALGO_DATA_DIR"
+	AvalancheGoDataDirVar    = "cryftgo_DATA_DIR"
 	defaultUnexpandedDataDir = "$" + AvalancheGoDataDirVar
 
 	DefaultProcessContextFilename = "process.json"
@@ -39,7 +39,7 @@ const (
 
 var (
 	// [defaultUnexpandedDataDir] will be expanded when reading the flags
-	defaultDataDir              = filepath.Join("$HOME", ".metalgo")
+	defaultDataDir              = filepath.Join("$HOME", ".cryftgo")
 	defaultDBDir                = filepath.Join(defaultUnexpandedDataDir, "db")
 	defaultLogDir               = filepath.Join(defaultUnexpandedDataDir, "logs")
 	defaultProfileDir           = filepath.Join(defaultUnexpandedDataDir, "profiles")

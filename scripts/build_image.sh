@@ -41,10 +41,10 @@ if [[ -z "${SKIP_BUILD_RACE}" && $image_tag == *"-r" ]]; then
   exit 1
 fi
 
-# The published name should be 'MetalBlockchain/metalgo', but to avoid unintentional
-# pushes it is defaulted to 'metalgo' (without a repo or registry name) which can
+# The published name should be 'shubhamdubey02/cryftgo', but to avoid unintentional
+# pushes it is defaulted to 'cryftgo' (without a repo or registry name) which can
 # only be used to create local images.
-DOCKER_IMAGE="${DOCKER_IMAGE:-metalgo}"
+DOCKER_IMAGE="${DOCKER_IMAGE:-cryftgo}"
 
 # If set to non-empty, prompts the building of a multi-arch image when the image
 # name indicates use of a registry.
@@ -108,6 +108,6 @@ fi
 
 # Only tag the latest image for the master branch when images are pushed to a registry
 if [[ "${DOCKER_IMAGE}" == *"/"* && ($image_tag == "master" || -n "${FORCE_TAG_LATEST}") ]]; then
-  echo "Tagging current metalgo images as $DOCKER_IMAGE:latest"
+  echo "Tagging current cryftgo images as $DOCKER_IMAGE:latest"
   docker buildx imagetools create -t "$DOCKER_IMAGE:latest" "$DOCKER_IMAGE:$commit_hash"
 fi

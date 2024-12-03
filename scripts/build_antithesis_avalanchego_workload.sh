@@ -8,4 +8,4 @@ METAL_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd )
 source "$METAL_PATH"/scripts/constants.sh
 
 echo "Building Workload..."
-go build -o "$METAL_PATH/build/antithesis-metalgo-workload" "$METAL_PATH/tests/antithesis/avalanchego/"*.go
+go build -o "$METAL_PATH/build/antithesis-cryftgo-workload" "$METAL_PATH/tests/antithesis/avalanchego/"*.go

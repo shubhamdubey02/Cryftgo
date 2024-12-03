@@ -3,7 +3,7 @@
 Now Serving: **Protocol Version 37**
 
 Protobuf files are hosted at
-[https://buf.build/metalblockchain/metalgo](https://buf.build/metalblockchain/metalgo) and
+[https://buf.build/shubhamdubey02/cryftgo](https://buf.build/shubhamdubey02/cryftgo) and
 can be used as dependencies in other projects.
 
 Protobuf linting and generation for this project is managed by
@@ -28,9 +28,9 @@ subnet vm must use the same protocol version to be compatible.
 
 ## Publishing to Buf Schema Registry
 
-- Checkout appropriate tag in MetalGo `git checkout v1.11.3`
+- Checkout appropriate tag in cryftgo `git checkout v1.11.3`
 - Change to proto/ directory `cd proto`.
 - Publish new tag to buf registry. `buf push -t v26`
 
-Note: Publishing requires auth to the metalblockchain org in buf
-https://buf.build/metalblockchain/repositories
+Note: Publishing requires auth to the shubhamdubey02 org in buf
+https://buf.build/shubhamdubey02/repositories

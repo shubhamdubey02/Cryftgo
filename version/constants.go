@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	Client = "metalgo"
+	Client = "cryftgo"
 	// RPCChainVMProtocol should be bumped anytime changes are made which
 	// require the plugin vm to upgrade to latest avalanchego release to be
 	// compatible.
@@ -61,8 +61,8 @@ var (
 	//go:embed compatibility.json
 	rpcChainVMProtocolCompatibilityBytes []byte
 	// RPCChainVMProtocolCompatibility maps RPCChainVMProtocol versions to the
-	// set of metalgo versions that supported that version. This is not used
-	// by metalgo, but is useful for downstream libraries.
+	// set of cryftgo versions that supported that version. This is not used
+	// by cryftgo, but is useful for downstream libraries.
 	RPCChainVMProtocolCompatibility map[uint][]*Semantic
 )
 

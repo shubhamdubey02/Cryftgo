@@ -33,8 +33,8 @@ echo ""
 
 # Ensure an absolute path to avoid dependency on the working directory
 # of script execution.
-METALGO_PATH="$(realpath "${METALGO_PATH:-./build/metalgo}")"
-E2E_ARGS="--metalgo-path=${METALGO_PATH}"
+cryftgo_PATH="$(realpath "${cryftgo_PATH:-./build/cryftgo}")"
+E2E_ARGS="--cryftgo-path=${cryftgo_PATH}"
 
 #################################
 # Determine ginkgo args

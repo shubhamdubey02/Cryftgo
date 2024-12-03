@@ -31,8 +31,8 @@ import (
 )
 
 const (
-	MainnetAPIURI = "https://api.metalblockchain.org"
-	TahoeAPIURI   = "https://tahoe.metalblockchain.org"
+	MainnetAPIURI = "https://api.shubhamdubey02.org"
+	TahoeAPIURI   = "https://tahoe.shubhamdubey02.org"
 	LocalAPIURI   = "http://localhost:9650"
 
 	fetchLimit = 1024

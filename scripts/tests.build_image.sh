@@ -52,15 +52,15 @@ build_and_test() {
         echo "image is for arm64 and binary is compiled with race detection"
         echo "amd64 github workers are known to run kernels incompatible with these images"
       else
-        echo "checking sanity of image $target_image for $arch by running 'metalgo --version'"
-        docker run  -t --rm --platform "linux/$arch" "$target_image" /metalgo/build/metalgo --version
+        echo "checking sanity of image $target_image for $arch by running 'cryftgo --version'"
+        docker run  -t --rm --platform "linux/$arch" "$target_image" /cryftgo/build/cryftgo --version
       fi
     done
   done
 }
 
 echo "checking build of single-arch images"
-build_and_test metalgo
+build_and_test cryftgo
 
 echo "starting local docker registry to allow verification of multi-arch image builds"
 REGISTRY_CONTAINER_ID="$(docker run --rm -d -P registry:2)"
@@ -81,4 +81,4 @@ function cleanup {
 trap cleanup EXIT
 
 echo "checking build of multi-arch images"
-build_and_test "localhost:${REGISTRY_PORT}/metalgo"
+build_and_test "localhost:${REGISTRY_PORT}/cryftgo"

@@ -24,8 +24,8 @@ import (
 )
 
 const (
-	AvalancheGoPathEnvName      = "METALGO_PATH"
-	AvalancheGoPluginDirEnvName = "METALGO_PLUGIN_DIR"
+	AvalancheGoPathEnvName      = "cryftgo_PATH"
+	AvalancheGoPluginDirEnvName = "cryftgo_PLUGIN_DIR"
 
 	defaultNodeInitTimeout = 10 * time.Second
 )

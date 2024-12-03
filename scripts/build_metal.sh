@@ -5,7 +5,7 @@ set -euo pipefail
 print_usage() {
   printf "Usage: build_metal [OPTIONS]
 
-  Build metalgo
+  Build cryftgo
 
   Options:
 
@@ -22,11 +22,11 @@ while getopts 'r' flag; do
   esac
 done
 
-# MetalGo root folder
+# cryftgo root folder
 METAL_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd )
 # Load the constants
 source "$METAL_PATH"/scripts/constants.sh
 
 build_args="$race"
-echo "Building MetalGo..."
-go build $build_args -ldflags "-X github.com/shubhamdubey02/cryftgo/version.GitCommit=$git_commit $static_ld_flags" -o "$metalgo_path" "$METAL_PATH/main/"*.go
+echo "Building cryftgo..."
+go build $build_args -ldflags "-X github.com/shubhamdubey02/cryftgo/version.GitCommit=$git_commit $static_ld_flags" -o "$cryftgo_path" "$METAL_PATH/main/"*.go

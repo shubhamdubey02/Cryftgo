@@ -5,7 +5,7 @@ set -euo pipefail
 print_usage() {
   printf "Usage: build [OPTIONS]
 
-  Build metalgo
+  Build cryftgo
 
   Options:
 
@@ -22,7 +22,7 @@ while getopts 'r' flag; do
   esac
 done
 
-# Metalgo root folder
+# cryftgo root folder
 METAL_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd )
 # Load the constants
 source "$METAL_PATH"/scripts/constants.sh
@@ -33,11 +33,11 @@ go mod download
 
 build_args="$race"
 
-# Build metalgo
+# Build cryftgo
 "$METAL_PATH"/scripts/build_metal.sh $build_args
 
-# Exit build successfully if the MetalGo binary is created successfully
-if [[ -f "$metalgo_path" ]]; then
+# Exit build successfully if the cryftgo binary is created successfully
+if [[ -f "$cryftgo_path" ]]; then
         echo "Build Successful"
         exit 0
 else

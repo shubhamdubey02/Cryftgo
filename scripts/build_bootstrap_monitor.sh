@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-# MetalGo root folder
+# cryftgo root folder
 METAL_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd )
 # Load the constants
 source "$METAL_PATH"/scripts/constants.sh

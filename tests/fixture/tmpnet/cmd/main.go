@@ -21,7 +21,7 @@ import (
 const cliVersion = "0.0.1"
 
 var (
-	errAvalancheGoRequired = fmt.Errorf("--metalgo-path or %s are required", tmpnet.AvalancheGoPathEnvName)
+	errAvalancheGoRequired = fmt.Errorf("--cryftgo-path or %s are required", tmpnet.AvalancheGoPathEnvName)
 	errNetworkDirRequired  = fmt.Errorf("--network-dir or %s are required", tmpnet.NetworkDirEnvName)
 )
 
@@ -106,7 +106,7 @@ func main() {
 		},
 	}
 	startNetworkCmd.PersistentFlags().StringVar(&rootDir, "root-dir", os.Getenv(tmpnet.RootDirEnvName), "The path to the root directory for temporary networks")
-	startNetworkCmd.PersistentFlags().StringVar(&avalancheGoPath, "metalgo-path", os.Getenv(tmpnet.AvalancheGoPathEnvName), "The path to a metalgo binary")
+	startNetworkCmd.PersistentFlags().StringVar(&avalancheGoPath, "cryftgo-path", os.Getenv(tmpnet.AvalancheGoPathEnvName), "The path to a cryftgo binary")
 	startNetworkCmd.PersistentFlags().StringVar(&pluginDir, "plugin-dir", os.ExpandEnv("$HOME/.avalanchego/plugins"), "[optional] the dir containing VM plugins")
 	startNetworkCmd.PersistentFlags().Uint8Var(&nodeCount, "node-count", tmpnet.DefaultNodeCount, "Number of nodes the network should initially consist of")
 	startNetworkCmd.PersistentFlags().StringVar(&networkOwner, "network-owner", "", "The string identifying the intended owner of the network")

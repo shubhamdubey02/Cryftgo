@@ -10,8 +10,8 @@ set -euo pipefail
 
 METAL_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd ) # Directory above this script
 
-# Where MetalGo binary goes
-metalgo_path="$METAL_PATH/build/metalgo"
+# Where cryftgo binary goes
+cryftgo_path="$METAL_PATH/build/cryftgo"
 
 # Image tag based on current branch  (shared between image build and its test script)
 # TODO: fix "fatal: No names found, cannot describe anything" in github CI
@@ -29,7 +29,7 @@ fi
 full_commit_hash="$(git --git-dir="$METAL_PATH/.git" rev-parse HEAD)"
 commit_hash="${full_commit_hash::8}"
 
-git_commit=${METALGO_COMMIT:-$( git rev-list -1 HEAD )}
+git_commit=${cryftgo_COMMIT:-$( git rev-list -1 HEAD )}
 
 # Static compilation
 static_ld_flags=''

@@ -26,15 +26,15 @@ var (
 func init() {
 	flag.StringVar(
 		&avalancheGoExecPath,
-		"metalgo-path",
+		"cryftgo-path",
 		"",
-		"metalgo executable path",
+		"cryftgo executable path",
 	)
 	flag.StringVar(
 		&avalancheGoExecPathToUpgradeTo,
-		"metalgo-path-to-upgrade-to",
+		"cryftgo-path-to-upgrade-to",
 		"",
-		"metalgo executable path to upgrade to",
+		"cryftgo executable path to upgrade to",
 	)
 }
 
@@ -43,7 +43,7 @@ var _ = ginkgo.Describe("[Upgrade]", func() {
 	require := require.New(tc)
 
 	ginkgo.It("can upgrade versions", func() {
-		network := tmpnet.NewDefaultNetwork("metalgo-upgrade")
+		network := tmpnet.NewDefaultNetwork("cryftgo-upgrade")
 
 		// Get the default genesis so we can modify it
 		genesis, err := network.DefaultGenesis()

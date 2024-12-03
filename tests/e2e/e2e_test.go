@@ -60,7 +60,7 @@ var _ = ginkgo.SynchronizedBeforeSuite(func() []byte {
 		tc,
 		flagVars,
 		&tmpnet.Network{
-			Owner: "metalgo-e2e",
+			Owner: "cryftgo-e2e",
 			DefaultFlags: tmpnet.FlagsMap{
 				config.UpgradeFileContentKey: upgradeBase64,
 			},

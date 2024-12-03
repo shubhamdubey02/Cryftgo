@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/metalblockchain/metalgo
+name: buf.build/shubhamdubey02/cryftgo
 build:
   excludes:
     # for golang we handle prometheus as a buf dep so we exclude it from generate, this proto

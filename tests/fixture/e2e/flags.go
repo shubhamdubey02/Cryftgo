@@ -86,17 +86,17 @@ func RegisterFlags() *FlagVars {
 	vars := FlagVars{}
 	flag.StringVar(
 		&vars.avalancheGoExecPath,
-		"metalgo-path",
+		"cryftgo-path",
 		os.Getenv(tmpnet.AvalancheGoPathEnvName),
 		fmt.Sprintf(
-			"[optional] metalgo executable path if creating a new network. Also possible to configure via the %s env variable.",
+			"[optional] cryftgo executable path if creating a new network. Also possible to configure via the %s env variable.",
 			tmpnet.AvalancheGoPathEnvName,
 		),
 	)
 	flag.StringVar(
 		&vars.pluginDir,
 		"plugin-dir",
-		getEnvWithDefault(tmpnet.AvalancheGoPluginDirEnvName, os.ExpandEnv("$HOME/.metalgo/plugins")),
+		getEnvWithDefault(tmpnet.AvalancheGoPluginDirEnvName, os.ExpandEnv("$HOME/.cryftgo/plugins")),
 		fmt.Sprintf(
 			"[optional] the dir containing VM plugins. Also possible to configure via the %s env variable.",
 			tmpnet.AvalancheGoPluginDirEnvName,

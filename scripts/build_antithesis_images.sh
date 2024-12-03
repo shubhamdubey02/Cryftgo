@@ -11,8 +11,8 @@ set -euo pipefail
 # TEST_SETUP=xsvm IMAGE_PREFIX=<registry>/<repo> IMAGE_TAG=latest ./scripts/build_antithesis_images.sh # Specify a prefix to enable image push and use a specific tag
 
 TEST_SETUP="${TEST_SETUP:-}"
-if [[ "${TEST_SETUP}" != "metalgo" && "${TEST_SETUP}" != "xsvm" ]]; then
-  echo "TEST_SETUP must be set. Valid values are 'metalgo' or 'xsvm'"
+if [[ "${TEST_SETUP}" != "cryftgo" && "${TEST_SETUP}" != "xsvm" ]]; then
+  echo "TEST_SETUP must be set. Valid values are 'cryftgo' or 'xsvm'"
   exit 255
 fi
 
@@ -59,7 +59,7 @@ function build_antithesis_images_for_avalanchego {
                           "${METAL_PATH}" "${node_only}"
 }
 
-if [[ "${TEST_SETUP}" == "metalgo" ]]; then
+if [[ "${TEST_SETUP}" == "cryftgo" ]]; then
   build_builder_image_for_avalanchego
 
   echo "Generating compose configuration for ${TEST_SETUP}"
@@ -73,7 +73,7 @@ else
   # Only build the avalanchego node image to use as the base for the xsvm image. Provide an empty
   # image prefix (the 1st argument) to prevent the image from being pushed
   NODE_ONLY=1
-  build_antithesis_images_for_avalanchego metalgo "" "${METAL_PATH}/Dockerfile" "${NODE_ONLY}"
+  build_antithesis_images_for_avalanchego cryftgo "" "${METAL_PATH}/Dockerfile" "${NODE_ONLY}"
 
   # Ensure avalanchego and xsvm binaries are available to create an initial db state that includes subnets.
   echo "Building binaries required for configuring the ${TEST_SETUP} test setup"
@@ -83,7 +83,7 @@ else
   echo "Generating compose configuration for ${TEST_SETUP}"
   gen_antithesis_compose_config "${IMAGE_TAG}" "${METAL_PATH}/tests/antithesis/xsvm/gencomposeconfig" \
                                 "${METAL_PATH}/build/antithesis/xsvm" \
-                                "METALGO_PATH=${METAL_PATH}/build/metalgo METALGO_PLUGIN_DIR=${HOME}/.metalgo/plugins"
+                                "cryftgo_PATH=${METAL_PATH}/build/cryftgo cryftgo_PLUGIN_DIR=${HOME}/.cryftgo/plugins"
 
   build_antithesis_images_for_avalanchego "${TEST_SETUP}" "${IMAGE_PREFIX}" "${METAL_PATH}/vms/example/xsvm/Dockerfile"
 fi

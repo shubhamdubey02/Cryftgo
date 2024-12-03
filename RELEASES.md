@@ -2889,7 +2889,7 @@ This version is backwards compatible to [v1.9.0](https://github.com/shubhamdubey
 ### Configs
 
 - Added `--plugin-dir` flag. The default value is `[DATADIR]/plugins`
-- Removed `--build-dir` flag. The location of the metalgo binary is no longer considered when looking for the `plugins` directory. Subnet maintainers should ensure that their node is able to properly discover plugins, as the default location is likely changed. See `--plugin-dir`
+- Removed `--build-dir` flag. The location of the cryftgo binary is no longer considered when looking for the `plugins` directory. Subnet maintainers should ensure that their node is able to properly discover plugins, as the default location is likely changed. See `--plugin-dir`
 - Changed the default value of `--api-keystore-enabled` to `false`
 - Added `--track-subnets` flag as a replacement of `--whitelisted-subnets`
 
@@ -3026,7 +3026,7 @@ This version is backwards compatible to [v1.9.0](https://github.com/shubhamdubey
 
 ### Chain Data
 
-- Added `ChainDataDir` to the `snow.Context` to allow blockchains to canonically access disk outside metalgo's database
+- Added `ChainDataDir` to the `snow.Context` to allow blockchains to canonically access disk outside cryftgo's database
 - Added `--chain-data-dir` as a CLI flag to specify the base directory for all `ChainDataDir`s
 
 ### Miscellaneous
@@ -3097,7 +3097,7 @@ This version is backwards compatible to [v1.9.0](https://github.com/shubhamdubey
 ### Documentation
 
 - Documented `Database.Put` invariant for `nil` and empty slices
-- Documented metalgo's versioning scheme
+- Documented cryftgo's versioning scheme
 - Improved `vm.proto` docs
 
 ### Miscellaneous
@@ -3128,7 +3128,7 @@ This version is backwards compatible to [v1.9.0](https://github.com/shubhamdubey
 - Added `validators.State` to the rpcchainvm server's `snow.Context`
 - Added `rpcProtocolVersion` to the output of `info.getNodeVersion`
 - Added `rpcchainvm` protocol version to the output of the `--version` flag
-- Added `version.RPCChainVMProtocolCompatibility` map to easily compare plugin compatibility against metalgo versions
+- Added `version.RPCChainVMProtocolCompatibility` map to easily compare plugin compatibility against cryftgo versions
 
 ### Builds
 
@@ -3235,7 +3235,7 @@ This version is backwards compatible to [v1.8.0](https://github.com/shubhamdubey
 - Exposed BLS proof of possession in the `info.getNodeID` API
 - Added BLS proof of possession to `AddPermissionlessValidatorTx`s for the Primary Network
 
-The default value of `--staking-signer-key-file` is `~/.metalgo/staking/signer.key`. If the key file doesn't exist, it will be populated with a new key.
+The default value of `--staking-signer-key-file` is `~/.cryftgo/staking/signer.key`. If the key file doesn't exist, it will be populated with a new key.
 
 ### Networking
 
@@ -3624,7 +3624,7 @@ This version is backwards compatible to [v1.7.0](https://github.com/shubhamdubey
 ### Metrics
 
 - Added leveldb metrics
-- Added process and golang metrics for the metalgo binary
+- Added process and golang metrics for the cryftgo binary
 - Added available disk space health check
   - Ensured that the disk space will not be fully utilized by shutting down the node if there is a critically low amount of free space remaining
 - Improved C-chain state sync metrics
@@ -3706,8 +3706,8 @@ This version is backwards compatible to [v1.7.0](https://github.com/shubhamdubey
 
 ### Logging
 
-- Replaced metalgo's internal logger with [uber-go/zap](https://github.com/uber-go/zap).
-- Replaced metalgo's log rotation with [lumberjack](https://github.com/natefinch/lumberjack).
+- Replaced cryftgo's internal logger with [uber-go/zap](https://github.com/uber-go/zap).
+- Replaced cryftgo's log rotation with [lumberjack](https://github.com/natefinch/lumberjack).
 - Renamed `log-display-highlight` to `log-format` and added `json` option.
 - Added `log-rotater-max-size`, `log-rotater-max-files`, `log-rotater-max-age`, `log-rotater-compress-enabled` options for log rotation.
 
@@ -3718,8 +3718,8 @@ This version is backwards compatible to [v1.7.0](https://github.com/shubhamdubey
 - Logged health checks whenever a failing health check is queried
 - Added callback support for the validator set manager
 - Increased `coreth` trie tip buffer size to 32
-- Added CPU usage metrics for metalgo and all sub-processes
-- Added Disk IO usage metrics for metalgo and all sub-processes
+- Added CPU usage metrics for cryftgo and all sub-processes
+- Added Disk IO usage metrics for cryftgo and all sub-processes
 
 ### Cleanup
 
@@ -3767,14 +3767,14 @@ This version is backwards compatible to [v1.7.0](https://github.com/shubhamdubey
 
 - Fixed a bug where a deadlock on shutdown caused historical re-generation on restart.
 - Added an API endpoint to fetch the current VM Config.
-- Added metalgo custom log formatting to the logs.
+- Added cryftgo custom log formatting to the logs.
 - Removed support for the JS Tracer.
 
 ### Logging
 
 - Added piping of subnet logs to stdout.
 - Lazily initialized logs to avoid opening files that are never written to.
-- Added support for arbitrarily deleted log files while metalgo is running.
+- Added support for arbitrarily deleted log files while cryftgo is running.
 - Removed redundant logging configs.
 
 ### Miscellaneous
@@ -4028,7 +4028,7 @@ This version is backwards compatible to [v1.7.0](https://github.com/shubhamdubey
 
 - Notified VMs of peer versions on `Connected`.
 - Fixed acceptance broadcasting over IPC.
-- Fixed 32-bit architecture builds for metalgo (not Coreth).
+- Fixed 32-bit architecture builds for cryftgo (not Coreth).
 
 ## [v1.7.2](https://github.com/shubhamdubey02/cryftgo/releases/tag/v1.7.2)
 
