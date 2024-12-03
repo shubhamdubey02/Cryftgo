@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cryft-labs/cryftgo/database/dbtest"
+	"github.com/shubhamdubey02/cryftgo/database/dbtest"
 )
 
 func TestInterface(t *testing.T) {

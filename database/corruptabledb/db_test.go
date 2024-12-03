@@ -11,9 +11,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/cryft-labs/cryftgo/database/dbtest"
 	"github.com/shubhamdubey02/cryftgo/database"
 	"github.com/shubhamdubey02/cryftgo/database/databasemock"
+	"github.com/shubhamdubey02/cryftgo/database/dbtest"
 	"github.com/shubhamdubey02/cryftgo/database/memdb"
 )
 

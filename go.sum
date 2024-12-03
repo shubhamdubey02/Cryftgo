@@ -45,10 +45,10 @@ github.com/DataDog/zstd v1.5.2/go.mod h1:g4AWEaM3yOg3HYfnJ3YIawPnVdXJh9QME85blwS
 github.com/FactomProject/basen v0.0.0-20150613233007-fe3947df716e/go.mod h1:kGUqhHd//musdITWjFvNTHn90WG9bMLBEPQZ17Cmlpw=
 github.com/FactomProject/btcutilecc v0.0.0-20130527213604-d3a63a5752ec/go.mod h1:CD8UlnlLDiqb36L110uqiP2iSflVjx9g/3U9hCI4q2U=
 github.com/Joker/hpp v1.0.0/go.mod h1:8x5n+M1Hp5hC0g8okX3sR3vFQwynaX/UgSOM9MeBKzY=
-github.com/cryft-labs/cryftgo v1.11.12 h1:hWWuchB69P6hn7V8z80lNBck8fS8/bJADble8mVmAn4=
-github.com/cryft-labs/cryftgo v1.11.12/go.mod h1:RY0EaxDYkNzuUKrxQhIMpNZwTZ7UPclFcnCtdKIhH+A=
-github.com/cryft-labs/cryftgo v1.11.13-rc.2 h1:wnFmpbAJbEsAh2mvpcvI8SsplBuieF5G7mhkXPTcnAo=
-github.com/cryft-labs/cryftgo v1.11.13-rc.2/go.mod h1:4HRnHwLbIn0b9UTVI/Dm9OvqXhBzaS7j729oRyRcAd0=
+github.com/shubhamdubey02/cryftgo v1.11.12 h1:hWWuchB69P6hn7V8z80lNBck8fS8/bJADble8mVmAn4=
+github.com/shubhamdubey02/cryftgo v1.11.12/go.mod h1:RY0EaxDYkNzuUKrxQhIMpNZwTZ7UPclFcnCtdKIhH+A=
+github.com/shubhamdubey02/cryftgo v1.11.13-rc.2 h1:wnFmpbAJbEsAh2mvpcvI8SsplBuieF5G7mhkXPTcnAo=
+github.com/shubhamdubey02/cryftgo v1.11.13-rc.2/go.mod h1:4HRnHwLbIn0b9UTVI/Dm9OvqXhBzaS7j729oRyRcAd0=
 github.com/NYTimes/gziphandler v1.1.1/go.mod h1:n/CVRwUEOgIxrgPvAQhUUr9oeUtvrhMomdKFjzJNB0c=
 github.com/Shopify/goreferrer v0.0.0-20181106222321-ec9c9a553398/go.mod h1:a1uqRtAwp2Xwc6WNPJEufxJ7fx3npB4UV/JOLmbu5I0=
 github.com/VictoriaMetrics/fastcache v1.12.1/go.mod h1:tX04vaqcNoQeGLD+ra5pU5sWkuxnzWhEzLwhP9w653o=
