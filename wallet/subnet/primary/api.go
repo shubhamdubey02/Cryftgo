@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cryft-labs/coreth/ethclient"
-	"github.com/cryft-labs/coreth/plugin/evm"
+	"github.com/shubhamdubey02/coreth/ethclient"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 
 	"github.com/shubhamdubey02/cryftgo/api/info"
 	"github.com/shubhamdubey02/cryftgo/codec"

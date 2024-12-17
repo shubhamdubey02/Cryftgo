@@ -6,7 +6,7 @@ package c
 import (
 	"math/big"
 
-	"github.com/cryft-labs/coreth/plugin/evm"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 
 	"github.com/shubhamdubey02/cryftgo/ids"
 	"github.com/shubhamdubey02/cryftgo/vms/secp256k1fx"

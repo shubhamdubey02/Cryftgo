@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cryft-labs/coreth/core"
+	"github.com/shubhamdubey02/coreth/core"
 	"github.com/stretchr/testify/require"
 
 	_ "embed"

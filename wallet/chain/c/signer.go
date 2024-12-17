@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cryft-labs/coreth/plugin/evm"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 
 	"github.com/shubhamdubey02/cryftgo/database"
 	"github.com/shubhamdubey02/cryftgo/ids"

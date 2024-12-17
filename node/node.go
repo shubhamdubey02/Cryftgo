@@ -80,7 +80,7 @@ import (
 	"github.com/shubhamdubey02/cryftgo/vms/registry"
 	"github.com/shubhamdubey02/cryftgo/vms/rpcchainvm/runtime"
 
-	coreth "github.com/cryft-labs/coreth/plugin/evm"
+	coreth "github.com/shubhamdubey02/coreth/plugin/evm"
 	avmconfig "github.com/shubhamdubey02/cryftgo/vms/avm/config"
 	platformconfig "github.com/shubhamdubey02/cryftgo/vms/platformvm/config"
 )

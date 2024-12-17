@@ -14,7 +14,7 @@ require (
 	github.com/btcsuite/btcd/btcutil v1.1.3
 	github.com/cockroachdb/pebble v0.0.0-20230928194634-aa077af62593
 	github.com/compose-spec/compose-go v1.20.2
-	github.com/cryft-labs/coreth v0.1.0-rc
+	github.com/shubhamdubey02/coreth v0.13.9-rc.1
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.1.0
 	github.com/ethereum/go-ethereum v1.13.14
 	github.com/google/btree v1.1.2

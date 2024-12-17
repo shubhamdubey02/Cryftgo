@@ -69,7 +69,7 @@ func DefaultChainConfigs() map[string]FlagsMap {
 	return map[string]FlagsMap{
 		// Supply only non-default configuration to ensure that default
 		// values will be used. Available C-Chain configuration options are
-		// defined in the `github.com/cryft-labs/coreth/evm` package.
+		// defined in the `github.com/shubhamdubey02/coreth/evm` package.
 		"C": {
 			"warp-api-enabled": true,
 			"log-level":        "trace",

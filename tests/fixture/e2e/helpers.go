@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cryft-labs/coreth/core/types"
-	"github.com/cryft-labs/coreth/ethclient"
-	"github.com/cryft-labs/coreth/interfaces"
+	"github.com/shubhamdubey02/coreth/core/types"
+	"github.com/shubhamdubey02/coreth/ethclient"
+	"github.com/shubhamdubey02/coreth/interfaces"
 	"github.com/stretchr/testify/require"
 
 	"github.com/shubhamdubey02/cryftgo/config"
@@ -176,7 +176,7 @@ func SuggestGasPrice(tc tests.TestContext, ethClient ethclient.Client) *big.Int 
 	require.NoError(tc, err)
 	// Double the suggested gas price to maximize the chances of
 	// acceptance. Maybe this can be revisited pending resolution of
-	// https://github.com/cryft-labs/coreth/issues/314.
+	// https://github.com/shubhamdubey02/coreth/issues/314.
 	gasPrice.Add(gasPrice, gasPrice)
 	return gasPrice
 }

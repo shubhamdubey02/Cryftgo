@@ -10,9 +10,9 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/cryft-labs/coreth/core"
-	"github.com/cryft-labs/coreth/params"
-	"github.com/cryft-labs/coreth/plugin/evm"
+	"github.com/shubhamdubey02/coreth/core"
+	"github.com/shubhamdubey02/coreth/params"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 
 	"github.com/shubhamdubey02/cryftgo/genesis"
 	"github.com/shubhamdubey02/cryftgo/ids"

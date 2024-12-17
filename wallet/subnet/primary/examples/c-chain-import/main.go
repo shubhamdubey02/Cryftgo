@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/cryft-labs/coreth/plugin/evm"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 
 	"github.com/shubhamdubey02/cryftgo/genesis"
 	"github.com/shubhamdubey02/cryftgo/ids"

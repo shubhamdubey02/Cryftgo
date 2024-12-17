@@ -7,12 +7,12 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cryft-labs/coreth/core/types"
-	"github.com/cryft-labs/coreth/params"
-	"github.com/cryft-labs/coreth/plugin/evm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/onsi/ginkgo/v2"
+	"github.com/shubhamdubey02/coreth/core/types"
+	"github.com/shubhamdubey02/coreth/params"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 	"github.com/stretchr/testify/require"
 
 	"github.com/shubhamdubey02/cryftgo/tests/fixture/e2e"

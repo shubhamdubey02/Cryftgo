@@ -10,7 +10,7 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/cryft-labs/coreth/plugin/evm"
+	"github.com/shubhamdubey02/coreth/plugin/evm"
 
 	"github.com/shubhamdubey02/cryftgo/database"
 	"github.com/shubhamdubey02/cryftgo/utils/math"
